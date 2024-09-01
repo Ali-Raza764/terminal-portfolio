@@ -1,6 +1,3 @@
-// Output.js
-import React from "react";
-
 const Output = ({ output }) => {
   return (
     <div>

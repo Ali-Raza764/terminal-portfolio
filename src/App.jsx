@@ -1,6 +1,4 @@
-// App.jsx
-import React from "react";
-import Terminal from "./Terminal";
+import Terminal from "./components/Terminal";
 
 const App = () => {
   return (

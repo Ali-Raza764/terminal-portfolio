@@ -1,23 +1,30 @@
-// Terminal.js
-import React, { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import CommandInput from "./CommandInput";
+import { processCommand } from "../utils/commandProcessor";
 import Output from "./Output";
-import { processCommand } from "./commandProcessor";
 
 const Terminal = () => {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState([]);
+  const [history, setHistory] = useState([]);
+
   const inputRef = useRef(null);
   const terminalRef = useRef(null);
 
+  // * For automatically inserting the welcome command
   useEffect(() => {
     inputRef.current.focus();
     processCommand("welcome", setOutput);
   }, []);
 
+  //* For auto scrolling
   useEffect(() => {
     terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
   }, [output]);
+
+  const handleFocus = () => {
+    inputRef.current.focus();
+  };
 
   const handleInputChange = (e) => {
     setInput(e.target.value);
@@ -25,36 +32,25 @@ const Terminal = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    processCommand(input, setOutput);
+    processCommand(input, setOutput, history);
+    input != "history" && setHistory([...history, input]);
     setInput("");
   };
 
-  const handleFocus = () => {
-    inputRef.current.focus();
-  };
-
-  const handleScroll = () => {
-    if (terminalRef.current.scrollTop === 0) {
-      // Load more output (Infinite scrolling)
-      // Example: setOutput(prevOutput => [...prevOutput, ...moreData]);
-    }
-  };
-
   return (
-    <div
-      ref={terminalRef}
+    <main
       className="bg-slate-800 text-slate-200 font-mono p-5 h-screen overflow-y-auto box-border cursor-text"
+      ref={terminalRef}
       onClick={handleFocus}
-      onScroll={handleScroll}
     >
       <Output output={output} />
       <CommandInput
         input={input}
+        inputRef={inputRef}
         handleInputChange={handleInputChange}
         handleSubmit={handleSubmit}
-        inputRef={inputRef}
       />
-    </div>
+    </main>
   );
 };
 

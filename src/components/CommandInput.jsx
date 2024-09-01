@@ -1,7 +1,6 @@
-// CommandInput.js
 import React from "react";
 
-const CommandInput = ({ input, handleInputChange, handleSubmit, inputRef }) => {
+const CommandInput = ({ handleSubmit, input, handleInputChange, inputRef }) => {
   return (
     <form onSubmit={handleSubmit} className="flex items-center mt-2">
       <span className="text-green-400 mr-2">visitor@ali-terminal:~$</span>
