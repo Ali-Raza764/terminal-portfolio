@@ -39,8 +39,6 @@ export const processCommand = (cmd, setOutput, history) => {
       return;
 
     case "history":
-      console.log(history);
-
       response = history.map((command, i) => {
         return <div key={i}>{command}</div>;
       });

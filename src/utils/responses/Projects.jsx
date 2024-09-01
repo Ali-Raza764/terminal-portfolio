@@ -71,8 +71,6 @@ const Projects = ({ projectName }) => {
 
   let ProjectData = null;
   projects.forEach((project) => {
-    console.log(project.name, projectName);
-
     if (project.name.toLocaleLowerCase() === projectName) {
       ProjectData = project;
     }
