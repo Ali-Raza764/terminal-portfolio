@@ -18,6 +18,9 @@ import {
   BiLogoUnsplash,
   BiSolidPurchaseTag,
 } from "react-icons/bi";
+import { DiRedis } from "react-icons/di";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiBabel, SiNumpy, SiPusher, SiShadcnui, SiVite } from "react-icons/si";
 
 const Skills = () => {
   const skills = [
@@ -28,18 +31,19 @@ const Skills = () => {
     { name: "HTML5", icon: <BiLogoHtml5 size={35} /> },
     { name: "CSS3", icon: <BiLogoCss3 size={35} /> },
     { name: "React", icon: <BiLogoReact size={35} /> },
-    { name: "Next.js", icon: <BiLogoReact size={35} /> },
+    { name: "Next.js", icon: <RiNextjsFill size={35} /> },
     { name: "Tailwind", icon: <BiLogoTailwindCss size={35} /> },
-    { name: "Vite", icon: <BiLogoReact size={35} /> },
+    { name: "Vite", icon: <SiVite size={35} /> },
     { name: "Node.js", icon: <BiLogoNodejs size={35} /> },
     { name: "Firebase", icon: <BiLogoFirebase size={35} /> },
     { name: "Figma", icon: <BiLogoFigma size={35} /> },
     { name: "Google Cloud", icon: <BiLogoGoogleCloud size={35} /> },
     { name: "MongoDB", icon: <BiLogoMongodb size={35} /> },
-    { name: "Redis", icon: <BiLogoUnsplash size={35} /> },
-    { name: "Pusher", icon: <BiSolidPurchaseTag size={35} /> },
-    { name: "shadcn", icon: <BiLogo99Designs size={35} /> },
-    { name: "Babel", icon: <BiLogoReact size={35} /> },
+    { name: "Redis", icon: <DiRedis size={35} /> },
+    { name: "Pusher", icon: <SiPusher size={35} /> },
+    { name: "shadcn", icon: <SiShadcnui size={35} /> },
+    { name: "Babel", icon: <SiBabel size={35} /> },
+    { name: "Numpy", icon: <SiNumpy size={35} /> },
   ];
   return (
     <div className="flex items-center">

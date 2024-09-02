@@ -16,7 +16,7 @@ const Projects = ({ projectName }) => {
       technologiesUsed: "Next.js 14 and Jiosaavn APi",
       description:
         "Baze is a music streaming and downloading service currently in development. The development is paused becaue of the api development",
-      liveUrl: "https://baze-rho.vercel.app",
+      liveUrl: "https://baze-chi.vercel.app",
     },
     {
       name: "Shopfinity",
@@ -24,7 +24,7 @@ const Projects = ({ projectName }) => {
       technologiesUsed: "Next.js 14, MongoDb, Stripe, Auth.js, Tailwind Css",
       description:
         "Shopfinity is a full stack online shopping platform with user and admin functionalities it handles payment using stripe webhooks and has features like add to favourites and add to cart. Shopfinity uses auth.js for authentication and mongoDb for Data storage. Still parts of the app are to be developed.",
-      liveUrl: "https://ecommerce-shopfinity.vercel.app",
+      liveUrl: "https://shopfinity-ecommerce.netlify.app",
     },
     {
       name: "Pendrive",
@@ -33,7 +33,7 @@ const Projects = ({ projectName }) => {
         "Next.js 14, Firebase Firestore, FireBase Storage, Clerk.js, Zustand, Tailwind Css",
       description:
         "Pendrive is a google drive clone that allows user to upload, star, trash, view, download and delete the files in their cloud storage. Pendrive is the first ever next.js application that I have made.",
-      liveUrl: "https://pendrive.vercel.app",
+      liveUrl: "https://pendrive.netlify.app",
     },
     {
       name: "Chess Pro",
@@ -42,7 +42,7 @@ const Projects = ({ projectName }) => {
         "Next.js 14, Socket.io, chessboardjsx, chess.js, Custom Node.js Game Server, Tailwind Css, Custom Chess Puzzles Api",
       description:
         "Chess Pro is attempt to create a chess.com and lichess.org clone using react.js and node.js servers running on top of web socket protocols. Currently ChessPro Offers Matching, game Link and Puzzles functionality with Authentication and user specific Functionalities to be developed",
-      liveUrl: "https://pendrive.vercel.app",
+      liveUrl: "https://chess-pro.vercel.app",
     },
     {
       name: "Terminal PortFolio",
@@ -50,7 +50,7 @@ const Projects = ({ projectName }) => {
       technologiesUsed: "React.js",
       description:
         "Terminal Portfolio is a fun project to create a terminal looking portfolio with using bare react.js and react-icons used with tailwind css",
-      liveUrl: "https://ali-terminal-potfolio.netlify.app",
+      liveUrl: "https://terrminalportfolio.netlify.app",
     },
     {
       name: "DownloadIt",
